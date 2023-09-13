@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * O2TI Webkul PagBank Module.
+ *
+ * Copyright © 2023 O2TI. All rights reserved.
+ *
+ * @author    Bruno Elisei <brunoelisei@o2ti.com>
+ * @license   See LICENSE for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="O2TI\PagBankAndClearSales\Logger\Logger">
+        <arguments>
+            <argument name="name" xsi:type="string">PagBankAndClearSalesData</argument>
+            <argument name="handlers"  xsi:type="array">
+                <item name="system" xsi:type="object">O2TI\PagBankAndClearSales\Logger\Handler</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

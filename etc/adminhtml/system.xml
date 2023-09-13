@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+/**
+ * O2TI PagBank and ClearSales.
+ *
+ * Copyright © 2023 O2TI. All rights reserved.
+ *
+ * @author    Bruno Elisei <brunoelisei@o2ti.com>
+ * @license   See LICENSE for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="o2ti" translate="label comment" sortOrder="100">
+            <label>O2TI</label>
+        </tab>
+        <section id="pagbank_and_clearsales" translate="label" sortOrder="20000" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>PagBank and ClearSales</label>
+            <tab>o2ti</tab>
+            <resource>O2TI_PagBankAndClearSales::config_pagbankandclearsales</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Configurações Gerais</label>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Habilitado</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="accepted_order_status" translate="label comment" type="select" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Status de Pedido para Aceite do Pagamento</label>
+                    <source_model>O2TI\PagBankAndClearSales\Model\Config\Source\Order\Status\PaymentReview</source_model>
+                    <comment>Status para capturar o pagamento na PagBank</comment>
+                </field>
+                <field id="denied_order_status" translate="label comment" type="select" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Status para Pedido para Negação do Pagamento</label>
+                    <source_model>O2TI\PagBankAndClearSales\Model\Config\Source\Order\Status\PaymentReview</source_model>
+                    <comment>Status para cancelar o pagamento na PagBank</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
