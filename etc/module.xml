@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
-<!-- 
+<!--
 /**
- * O2TI PagBank and ClearSales.
+ * O2TI PagBank Source Inventory Auth.
  *
  * Copyright © 2023 O2TI. All rights reserved.
  *
@@ -10,10 +10,11 @@
  */
  -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-    <module name="O2TI_PagBankAndClearSales" setup_version="100.0.1">
+    <module name="O2TI_PagBankSourceInventoryAuth" setup_version="100.0.1">
         <sequence>
             <module name="PagBank_PaymentMagento"/>
-            <module name="Clearsale_Integration"/>
+            <module name="Magento_Inventory"/>
+            <module name="Magento_InventoryAdminUi"/>
         </sequence>
     </module>
 </config>

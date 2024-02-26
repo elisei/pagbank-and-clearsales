@@ -1,6 +1,6 @@
 <?php
 /**
- * O2TI PagBank and ClearSales.
+ * O2TI PagBank Source Inventory Auth.
  *
  * Copyright © 2023 O2TI. All rights reserved.
  *
@@ -12,6 +12,6 @@ use \Magento\Framework\Component\ComponentRegistrar;
 
 ComponentRegistrar::register(
     ComponentRegistrar::MODULE,
-    'O2TI_PagBankAndClearSales',
+    'O2TI_PagBankSourceInventoryAuth',
     __DIR__
 );

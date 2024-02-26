@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+/**
+ * O2TI PagBank Source Inventory Auth.
+ *
+ * Copyright © 2023 O2TI. All rights reserved.
+ *
+ * @author    Bruno Elisei <brunoelisei@o2ti.com>
+ * @license   See LICENSE for license details.
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Api/etc/extension_attributes.xsd">
+    <extension_attributes for="Magento\InventoryApi\Api\Data\SourceInterface">
+        <attribute code="oauth" type="string"/>
+        <attribute code="refresh_oauth" type="string"/>
+        <attribute code="public_key" type="string"/>
+    </extension_attributes>
+</config>
