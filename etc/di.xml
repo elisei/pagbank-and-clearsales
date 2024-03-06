@@ -1,42 +1,21 @@
 <?xml version="1.0"?>
 <!--
 /**
- * O2TI PagBank Source Inventory Auth.
+ * O2TI Webkul PagBank Module.
  *
  * Copyright © 2023 O2TI. All rights reserved.
  *
  * @author    Bruno Elisei <brunoelisei@o2ti.com>
  * @license   See LICENSE for license details.
  */
- -->
+-->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
-    <type name="O2TI\PagBankSourceInventoryAuth\Logger\Logger">
+    <type name="O2TI\PagBankAndClearSales\Logger\Logger">
         <arguments>
-            <argument name="name" xsi:type="string">PagBankSourceInventoryAuthData</argument>
+            <argument name="name" xsi:type="string">PagBankAndClearSalesData</argument>
             <argument name="handlers"  xsi:type="array">
-                <item name="system" xsi:type="object">O2TI\PagBankSourceInventoryAuth\Logger\Handler</item>
+                <item name="system" xsi:type="object">O2TI\PagBankAndClearSales\Logger\Handler</item>
             </argument>
         </arguments>
     </type>
-
-    <type name="PagBank\PaymentMagento\Gateway\Config\Config">
-        <plugin name="pagbank_source_inventory_get_merchant_gateway_oauth"
-                type="O2TI\PagBankSourceInventoryAuth\Plugin\PagBank\ConfigBySourceInventory"
-                sortOrder="1" />
-        <plugin name="pagbank_source_inventory_get_merchant_gateway_refresh_oauth"
-                type="O2TI\PagBankSourceInventoryAuth\Plugin\PagBank\ConfigBySourceInventory"
-                sortOrder="2" />
-        <plugin name="pagbank_source_inventory_get_merchant_gateway_public_key"
-                type="O2TI\PagBankSourceInventoryAuth\Plugin\PagBank\ConfigBySourceInventory"
-                sortOrder="3" />
-    </type>
-
-    <type name="Magento\InventoryApi\Api\SourceRepositoryInterface">
-        <plugin name="plugin_source_save" type="O2TI\PagBankSourceInventoryAuth\Plugin\InventorySource\AddExtensionAttributes" sortOrder="100"/>
-    </type>
-
-    <type name="Magento\InventoryAdminUi\Ui\DataProvider\SourceDataProvider">
-        <plugin name="display_attribute" type="O2TI\PagBankSourceInventoryAuth\Plugin\InventorySource\PagBankAttribute" sortOrder="100"/>
-    </type>
-
 </config>

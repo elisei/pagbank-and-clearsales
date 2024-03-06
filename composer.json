@@ -1,9 +1,10 @@
 {
-    "name": "o2ti/pagbank-source-inventory-auth",
-    "description": "Captura o oAuth na sessão de Source Inventory",
+    "name": "o2ti/pagbank-and-clearsale",
+    "description": "Automatize o fluxo de Aceitação e Negação de pedido pela resposta da ClearSales",
     "require": {
         "php": "~7.4.0||~8.1.0||~8.2.0",
-        "pagbank/payment-magento": "*"
+        "pagbank/payment-magento": "*",
+        "clearsale/integration": "*"
     },
     "type": "magento2-module",
     "authors": [
@@ -39,6 +40,10 @@
         {
             "type": "composer",
             "url": "https://repo.magento.com/"
+        },
+        {
+            "type": "composer",
+            "url": "https://repo-magento-mirror.fooman.co.nz/"
         }
     ],
     "prefer-stable": true,
