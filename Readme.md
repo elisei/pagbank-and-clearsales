@@ -6,6 +6,7 @@ Nesse processo, após a decisão de análise de risco da Clear Sale é executada
 ## Configuração
 
 > Lojas -> Situação do pedido
+
 ![Captura de tela de 2023-09-14 10-41-02](https://github.com/elisei/pagbank-and-clearsales/assets/1786389/74feaa21-bb1f-4548-9869-67338ab1c7a7)
 
 Atribuir os status criados pelo módulo da Clear Sale com o state payment_review, conforme print:
