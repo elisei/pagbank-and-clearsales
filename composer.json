@@ -2,7 +2,7 @@
     "name": "o2ti/pagbank-and-clearsale",
     "description": "Automatize o fluxo de Aceitação e Negação de pedido pela resposta da ClearSales",
     "require": {
-        "php": "~7.4.0||~8.1.0||~8.2.0",
+        "php": "~7.4.0||~8.1.0||~8.2.0||~8.3.0",
         "pagbank/payment-magento": "*"
     },
     "type": "magento2-module",
